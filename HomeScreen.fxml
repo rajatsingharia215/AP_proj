@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #2F363F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomeScreenController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Circle fx:id="ball1" fill="#44ffa2" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="ball2" fill="#fc5bbd" layoutX="1280.0" layoutY="720.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+         </children>
+      </AnchorPane>
+      <HBox fx:id="buttonContainer" layoutX="354.0" layoutY="251.0" prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #7B8788; -fx-border-radius: 10; -fx-background-radius: 20;">
+         <children>
+            <Group fx:id="NewGame" onMouseClicked="#LaunchNewGame">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <AnchorPane layoutX="25.999999523162842" layoutY="21.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 10; -fx-background-color: #2C3335;">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" layoutX="19.0" layoutY="144.0" size="5em" strokeLineCap="ROUND" strokeWidth="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#0000006f" height="56.6" offsetY="6.0" radius="26.645" spread="0.24" width="51.98" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Group>
+            <Group fx:id="Resume" onMouseClicked="#SavedGame">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <AnchorPane layoutX="26.0" layoutY="21.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 10; -fx-background-color: #2C3335;">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLAY" layoutX="19.0" layoutY="144.0" size="5em" strokeLineCap="ROUND" strokeWidth="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#0000006f" height="56.6" offsetY="6.0" radius="26.645" spread="0.24" width="51.98" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Group>
+            <Group fx:id="Exit" onMouseClicked="#close">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <AnchorPane layoutX="26.0" layoutY="21.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 10; -fx-background-color: #2C3335;">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" layoutX="15.0" layoutY="154.0" size="5em" strokeLineCap="ROUND" strokeWidth="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#0000006f" height="56.6" offsetY="6.0" radius="26.645" spread="0.24" width="51.98" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Group>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#26dbffe3" height="58.16" offsetY="6.0" radius="27.63" spread="0.23" width="54.36" />
+         </effect>
+      </HBox>
+      <Label alignment="CENTER" layoutX="481.0" layoutY="73.0" text="Color Switch" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Montserrat-Regular" size="54.0" />
+         </font>
+      </Label>
+      <Group layoutX="301.0" layoutY="52.0">
+         <children>
+            <Circle fill="#bf11f0" layoutX="40.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#fbff1f" layoutX="41.0" layoutY="80.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#ff1f70" layoutX="80.0" layoutY="40.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#1fff33" layoutY="41.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+         </children>
+      </Group>
+      <Group layoutX="951.0" layoutY="53.0">
+         <children>
+            <Circle fill="#bf11f0" layoutX="40.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#fbff1f" layoutX="41.0" layoutY="80.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#ff1f70" layoutX="80.0" layoutY="40.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#1fff33" layoutY="41.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+         </children>
+      </Group>
+      <FontAwesomeIcon fx:id="setting" fill="WHITE" glyphName="COG" layoutX="545.0" layoutY="678.0" size="5em" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+      <FontAwesomeIcon fx:id="help" fill="WHITE" glyphName="QUESTION" layoutX="725.0" layoutY="679.0" size="5em" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIcon>
+      <Label layoutX="46.0" layoutY="27.0" text="High Score" textFill="WHITE">
+         <font>
+            <Font name="Montserrat-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="HighScore" layoutX="46.0" layoutY="60.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Montserrat-Regular" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="WHITE" glyphName="STAR" layoutX="47.0" layoutY="120.0" size="3em" />
+      <Label fx:id="stars" layoutX="100.0" layoutY="97.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Montserrat-Regular" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
